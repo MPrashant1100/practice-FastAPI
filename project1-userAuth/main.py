@@ -1,3 +1,4 @@
+from multiprocessing import get_context
 from fastapi import FastAPI
 from pydantic import BaseModel, Field
 
@@ -21,3 +22,7 @@ class User(BaseModel):
 class Token: 
     access_Token: str
     token_type: str
+
+
+def get_password_hash(password):
+    return get_context.hash(password)
