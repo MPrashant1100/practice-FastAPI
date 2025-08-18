@@ -27,4 +27,3 @@ class Token:
 def get_password_hash(password):
     return get_context.hash(password)
 
-def 
